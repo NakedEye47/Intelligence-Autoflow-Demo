@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intelligence AutoFlow Demo</title>
+    <meta
+      name="description"
+      content="A standalone GitHub Pages demo for Intelligence AutoFlow, showcasing dashboard, workflows, reporting, AI, integrations, and rollout readiness."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">IA</div>
+          <div>
+            <div class="brand-title">Intelligence</div>
+            <div class="brand-subtitle">AutoFlow Demo</div>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-item active" data-view="dashboard">Dashboard</button>
+          <button class="nav-item" data-view="workflows">Workflows</button>
+          <button class="nav-item" data-view="reporting">Reports</button>
+          <button class="nav-item" data-view="ai">AI Operations</button>
+          <button class="nav-item" data-view="integrations">Integrations</button>
+          <button class="nav-item" data-view="readiness">Deployment</button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user-card">
+            <div class="user-avatar">AC</div>
+            <div>
+              <div class="user-name">Alex Chen</div>
+              <div class="user-role">Administrator</div>
+            </div>
+          </div>
+          <div class="sidebar-note">
+            Static GitHub Pages demo
+            <span>No backend required</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Company-ready automation platform</p>
+            <h1>Interactive demo for GitHub Pages and stakeholder walkthroughs.</h1>
+            <p class="hero-copy">
+              This demo mirrors the production product story with simulated workflows, reporting,
+              AI tasks, integrations, and deployment readiness signals in a single static package.
+            </p>
+          </div>
+          <div class="hero-actions">
+            <button class="primary-button" id="launch-demo">Launch workspace</button>
+            <button class="ghost-button" id="open-readiness">View deployment notes</button>
+          </div>
+        </header>
+
+        <section class="top-metrics" aria-label="Key metrics">
+          <article class="metric-card">
+            <span class="metric-label">Connected systems</span>
+            <strong class="metric-value">14</strong>
+            <span class="metric-meta">Power BI, Azure, Jira, HubSpot and more</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Automations executed</span>
+            <strong class="metric-value">24,870</strong>
+            <span class="metric-meta">98.6% success across operations flows</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Readiness score</span>
+            <strong class="metric-value">91%</strong>
+            <span class="metric-meta">Operationally ready for demo and GitHub Live</span>
+          </article>
+        </section>
+
+        <section class="view active" id="dashboard-view">
+          <div class="content-grid">
+            <article class="panel feature-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-kicker">Executive overview</p>
+                  <h2>Operational command center</h2>
+                </div>
+                <span class="status-pill success">Live demo state</span>
+              </div>
+              <div class="spotlight-grid">
+                <div class="spotlight-card">
+                  <p>Finance workflow stability</p>
+                  <strong>99.1%</strong>
+                  <span>Invoice processing, ERP sync, approvals</span>
+                </div>
+                <div class="spotlight-card">
+                  <p>AI assistant throughput</p>
+                  <strong>4.8k docs</strong>
+                  <span>Classification, extraction, summarization</span>
+                </div>
+                <div class="spotlight-card">
+                  <p>Reporting freshness</p>
+                  <strong>11 min</strong>
+                  <span>Average refresh latency across dashboards</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-heading compact">
+                <div>
+                  <p class="panel-kicker">Recent activity</p>
+                  <h2>What changed today</h2>
+                </div>
+              </div>
+              <div class="timeline" id="activity-timeline"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="workflows-view">
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Workflow library</p>
+                <h2>Core automations</h2>
+              </div>
+              <span class="status-pill info">Create, run, duplicate, pause</span>
+            </div>
+            <div class="card-grid" id="workflow-grid"></div>
+          </article>
+        </section>
+
+        <section class="view" id="reporting-view">
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Reporting hub</p>
+                <h2>Automated reporting portfolio</h2>
+              </div>
+              <span class="status-pill neutral">Export-ready</span>
+            </div>
+            <div class="card-grid" id="report-grid"></div>
+          </article>
+        </section>
+
+        <section class="view" id="ai-view">
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">AI operations</p>
+                <h2>Model-assisted workstreams</h2>
+              </div>
+              <span class="status-pill warning">Human-in-the-loop demo</span>
+            </div>
+            <div class="card-grid" id="ai-grid"></div>
+          </article>
+        </section>
+
+        <section class="view" id="integrations-view">
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Enterprise integrations</p>
+                <h2>Connector landscape</h2>
+              </div>
+              <span class="status-pill success">Credential-ready demo</span>
+            </div>
+            <div class="card-grid" id="integration-grid"></div>
+          </article>
+        </section>
+
+        <section class="view" id="readiness-view">
+          <div class="content-grid">
+            <article class="panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-kicker">Deployment story</p>
+                  <h2>Company rollout checklist</h2>
+                </div>
+                <span class="status-pill success">Pilot-ready</span>
+              </div>
+              <div class="checklist" id="readiness-checks"></div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-heading compact">
+                <div>
+                  <p class="panel-kicker">Implementation summary</p>
+                  <h2>What this demo communicates</h2>
+                </div>
+              </div>
+              <ul class="detail-list">
+                <li>Secure operations platform with dashboards, workflows, reports, AI, and integrations.</li>
+                <li>Company-oriented navigation and realistic enterprise sample data.</li>
+                <li>Static, portable demo suitable for GitHub Pages, portfolio presentation, and stakeholder review.</li>
+                <li>Standalone folder that does not affect the live production Next.js application.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="demo-modal hidden" id="demo-modal" aria-hidden="true">
+      <div class="demo-dialog">
+        <div class="demo-dialog-header">
+          <p class="eyebrow">Demo credentials</p>
+          <h2>Static walkthrough mode</h2>
+        </div>
+        <p class="dialog-copy">
+          This GitHub Pages package is a front-end demo, so sign-in is simulated. Use it for
+          product tours, GitHub Live previews, and stakeholder presentations.
+        </p>
+        <div class="demo-credentials">
+          <div>
+            <span>Administrator</span>
+            <strong>admin@autoflow.demo</strong>
+          </div>
+          <div>
+            <span>Password</span>
+            <strong>demo-access</strong>
+          </div>
+        </div>
+        <button class="primary-button wide-button" id="enter-demo">Enter demo workspace</button>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
