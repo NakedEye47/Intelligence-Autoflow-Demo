@@ -3,236 +3,438 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intelligence AutoFlow Demo</title>
+    <title>Intelligence AutoFlow Demo Workspace</title>
     <meta
       name="description"
-      content="A standalone GitHub Pages demo for Intelligence AutoFlow, showcasing dashboard, workflows, reporting, AI, integrations, and rollout readiness."
+      content="A static workspace demo of Intelligence AutoFlow that mirrors the look and flow of the full platform."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <aside class="sidebar">
-        <div class="brand">
-          <div class="brand-mark">IA</div>
-          <div>
+    <div class="app-shell" id="app-shell">
+      <aside class="sidebar" aria-label="Workspace navigation">
+        <div class="sidebar-brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="brand-copy">
             <div class="brand-title">Intelligence</div>
-            <div class="brand-subtitle">AutoFlow Demo</div>
+            <div class="brand-subtitle">AutoFlow</div>
           </div>
         </div>
 
-        <nav class="nav" aria-label="Primary">
-          <button class="nav-item active" data-view="dashboard">Dashboard</button>
-          <button class="nav-item" data-view="workflows">Workflows</button>
-          <button class="nav-item" data-view="reporting">Reports</button>
-          <button class="nav-item" data-view="ai">AI Operations</button>
-          <button class="nav-item" data-view="integrations">Integrations</button>
-          <button class="nav-item" data-view="readiness">Deployment</button>
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-view="dashboard">
+            <span class="nav-indicator"></span>
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="8" height="8" rx="2"></rect>
+                <rect x="13" y="3" width="8" height="5" rx="2"></rect>
+                <rect x="13" y="10" width="8" height="11" rx="2"></rect>
+                <rect x="3" y="13" width="8" height="8" rx="2"></rect>
+              </svg>
+            </span>
+            <span class="nav-copy">
+              <strong>Dashboard</strong>
+              <small>Operations overview</small>
+            </span>
+          </button>
+          <button class="nav-item" data-view="workflows">
+            <span class="nav-indicator"></span>
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M6 6h6v6H6z"></path>
+                <path d="M12 9h6"></path>
+                <path d="M18 9v9H9"></path>
+                <path d="M9 18 6 15"></path>
+              </svg>
+            </span>
+            <span class="nav-copy">
+              <strong>Workflows</strong>
+              <small>Create, run, pause</small>
+            </span>
+          </button>
+          <button class="nav-item" data-view="reporting">
+            <span class="nav-indicator"></span>
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5"></path>
+                <path d="M10 19V9"></path>
+                <path d="M16 19V12"></path>
+                <path d="M22 19V7"></path>
+              </svg>
+            </span>
+            <span class="nav-copy">
+              <strong>Reports &amp; Data</strong>
+              <small>Live and scheduled outputs</small>
+            </span>
+          </button>
+          <button class="nav-item" data-view="ai">
+            <span class="nav-indicator"></span>
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="6" y="7" width="12" height="10" rx="3"></rect>
+                <path d="M9 3v4"></path>
+                <path d="M15 3v4"></path>
+                <circle cx="10" cy="12" r="1"></circle>
+                <circle cx="14" cy="12" r="1"></circle>
+                <path d="M9 16h6"></path>
+              </svg>
+            </span>
+            <span class="nav-copy">
+              <strong>AI Assistant</strong>
+              <small>Tasks and guided actions</small>
+            </span>
+          </button>
+          <button class="nav-item" data-view="integrations">
+            <span class="nav-indicator"></span>
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M8 7a3 3 0 1 1-4 4l4-4Z"></path>
+                <path d="m10 9 5 5"></path>
+                <path d="m14 5 5 5"></path>
+                <path d="M17 7a3 3 0 1 1 4 4l-4-4Z"></path>
+                <path d="m3 21 6-6"></path>
+                <path d="m15 15 6 6"></path>
+              </svg>
+            </span>
+            <span class="nav-copy">
+              <strong>Integrations</strong>
+              <small>Connector readiness</small>
+            </span>
+          </button>
         </nav>
 
         <div class="sidebar-footer">
-          <div class="user-card">
-            <div class="user-avatar">AC</div>
-            <div>
-              <div class="user-name">Alex Chen</div>
-              <div class="user-role">Administrator</div>
+          <button class="footer-link" data-view="settings">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v4"></path>
+                <path d="M12 17v4"></path>
+                <path d="m4.93 4.93 2.83 2.83"></path>
+                <path d="m16.24 16.24 2.83 2.83"></path>
+                <path d="M3 12h4"></path>
+                <path d="M17 12h4"></path>
+                <path d="m4.93 19.07 2.83-2.83"></path>
+                <path d="m16.24 7.76 2.83-2.83"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+            <span class="nav-copy">
+              <strong>Settings &amp; Access</strong>
+              <small>Security, policies, audit</small>
+            </span>
+          </button>
+
+          <button class="profile-card footer-link" data-view="settings">
+            <div class="profile-avatar">AC</div>
+            <div class="profile-copy">
+              <strong>Alex Chen</strong>
+              <span>Platform Administrator</span>
             </div>
-          </div>
-          <div class="sidebar-note">
-            Static GitHub Pages demo
-            <span>No backend required</span>
-          </div>
+          </button>
         </div>
       </aside>
 
-      <main class="main">
-        <header class="hero">
-          <div>
-            <p class="eyebrow">Company-ready automation platform</p>
-            <h1>Interactive demo for GitHub Pages and stakeholder walkthroughs.</h1>
-            <p class="hero-copy">
-              This demo mirrors the production product story with simulated workflows, reporting,
-              AI tasks, integrations, and deployment readiness signals in a single static package.
-            </p>
+      <div class="workspace">
+        <header class="workspace-header">
+          <div class="header-left">
+            <button class="icon-button" id="sidebar-toggle" aria-label="Toggle sidebar">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 17h16"></path>
+              </svg>
+            </button>
+
+            <label class="search-field">
+              <span class="search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-3.5-3.5"></path>
+                </svg>
+              </span>
+              <input
+                id="global-search"
+                type="text"
+                placeholder="Search workflows, reports, integrations..."
+                autocomplete="off"
+              />
+            </label>
           </div>
-          <div class="hero-actions">
-            <button class="primary-button" id="launch-demo">Launch workspace</button>
-            <button class="ghost-button" id="open-readiness">View deployment notes</button>
+
+          <div class="header-right">
+            <div class="status-pill status-success">
+              <span class="status-dot"></span>
+              <span>All Systems Operational</span>
+            </div>
+
+            <div class="notification-wrap">
+              <button class="icon-button" id="notifications-toggle" aria-label="Notifications">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path>
+                  <path d="M10 17a2 2 0 0 0 4 0"></path>
+                </svg>
+                <span class="notification-count" id="notification-count"></span>
+              </button>
+              <div class="notification-panel hidden" id="notification-panel"></div>
+            </div>
+
+            <button class="btn-gold" id="new-workflow-button">New Workflow</button>
           </div>
         </header>
 
-        <section class="top-metrics" aria-label="Key metrics">
-          <article class="metric-card">
-            <span class="metric-label">Connected systems</span>
-            <strong class="metric-value">14</strong>
-            <span class="metric-meta">Power BI, Azure, Jira, HubSpot and more</span>
-          </article>
-          <article class="metric-card">
-            <span class="metric-label">Automations executed</span>
-            <strong class="metric-value">24,870</strong>
-            <span class="metric-meta">98.6% success across operations flows</span>
-          </article>
-          <article class="metric-card">
-            <span class="metric-label">Readiness score</span>
-            <strong class="metric-value">91%</strong>
-            <span class="metric-meta">Operationally ready for demo and GitHub Live</span>
-          </article>
-        </section>
-
-        <section class="view active" id="dashboard-view">
-          <div class="content-grid">
-            <article class="panel feature-panel">
-              <div class="panel-heading">
-                <div>
-                  <p class="panel-kicker">Executive overview</p>
-                  <h2>Operational command center</h2>
-                </div>
-                <span class="status-pill success">Live demo state</span>
-              </div>
-              <div class="spotlight-grid">
-                <div class="spotlight-card">
-                  <p>Finance workflow stability</p>
-                  <strong>99.1%</strong>
-                  <span>Invoice processing, ERP sync, approvals</span>
-                </div>
-                <div class="spotlight-card">
-                  <p>AI assistant throughput</p>
-                  <strong>4.8k docs</strong>
-                  <span>Classification, extraction, summarization</span>
-                </div>
-                <div class="spotlight-card">
-                  <p>Reporting freshness</p>
-                  <strong>11 min</strong>
-                  <span>Average refresh latency across dashboards</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel-heading compact">
-                <div>
-                  <p class="panel-kicker">Recent activity</p>
-                  <h2>What changed today</h2>
-                </div>
-              </div>
-              <div class="timeline" id="activity-timeline"></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="view" id="workflows-view">
-          <article class="panel">
-            <div class="panel-heading">
+        <main class="workspace-content">
+          <section class="view active" id="dashboard-view">
+            <div class="page-head">
               <div>
-                <p class="panel-kicker">Workflow library</p>
-                <h2>Core automations</h2>
+                <h1>Dashboard</h1>
+                <p>Monitor workflows, reports, AI tasks, and integration health from one live operations view.</p>
               </div>
-              <span class="status-pill info">Create, run, duplicate, pause</span>
             </div>
+
+            <div class="stats-grid" id="dashboard-stats"></div>
+
+            <div class="content-grid">
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="eyebrow">Live control</p>
+                    <h2>Workflow Control</h2>
+                  </div>
+                  <button class="text-link" data-jump="workflows">View all</button>
+                </div>
+                <div class="stack-list" id="dashboard-workflows"></div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="eyebrow">Activity feed</p>
+                    <h2>Recent Activity</h2>
+                  </div>
+                  <button class="text-link" id="refresh-activity-button">Refresh</button>
+                </div>
+                <div class="stack-list" id="activity-feed"></div>
+              </section>
+            </div>
+
+            <div class="content-grid content-grid-lower">
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="eyebrow">Connector health</p>
+                    <h2>Integration Readiness</h2>
+                  </div>
+                  <button class="text-link" data-jump="integrations">Open hub</button>
+                </div>
+                <div class="stack-list" id="readiness-list"></div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="eyebrow">Environment</p>
+                    <h2>Workspace Snapshot</h2>
+                  </div>
+                </div>
+                <div class="snapshot-grid" id="workspace-snapshot"></div>
+              </section>
+            </div>
+          </section>
+
+          <section class="view" id="workflows-view">
+            <div class="page-head">
+              <div>
+                <h1>Workflow Automation</h1>
+                <p>Build, manage, and monitor automated workflows.</p>
+              </div>
+              <button class="btn-gold" id="top-create-workflow-button">Create Workflow</button>
+            </div>
+
+            <div class="toolbar">
+              <label class="search-field compact">
+                <span class="search-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-3.5-3.5"></path>
+                  </svg>
+                </span>
+                <input id="workflow-search" type="text" placeholder="Search workflows..." autocomplete="off" />
+              </label>
+
+              <select id="workflow-status-filter">
+                <option value="all">All statuses</option>
+                <option value="active">Active</option>
+                <option value="paused">Paused</option>
+              </select>
+
+              <select id="workflow-category-filter">
+                <option value="all">All categories</option>
+                <option value="Finance">Finance</option>
+                <option value="HR">HR</option>
+                <option value="Operations">Operations</option>
+                <option value="Security">Security</option>
+                <option value="Leadership">Leadership</option>
+              </select>
+            </div>
+
             <div class="card-grid" id="workflow-grid"></div>
-          </article>
-        </section>
+          </section>
 
-        <section class="view" id="reporting-view">
-          <article class="panel">
-            <div class="panel-heading">
+          <section class="view" id="reporting-view">
+            <div class="page-head">
               <div>
-                <p class="panel-kicker">Reporting hub</p>
-                <h2>Automated reporting portfolio</h2>
+                <h1>Reports &amp; Data</h1>
+                <p>Automated reporting and data analytics.</p>
               </div>
-              <span class="status-pill neutral">Export-ready</span>
+              <button class="btn-gold" id="new-report-button">New Report</button>
             </div>
+
+            <div class="stats-grid compact triple" id="report-stats"></div>
+
+            <div class="toolbar">
+              <label class="search-field compact">
+                <span class="search-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-3.5-3.5"></path>
+                  </svg>
+                </span>
+                <input id="report-search" type="text" placeholder="Search reports..." autocomplete="off" />
+              </label>
+
+            </div>
+
             <div class="card-grid" id="report-grid"></div>
-          </article>
-        </section>
+          </section>
 
-        <section class="view" id="ai-view">
-          <article class="panel">
-            <div class="panel-heading">
+          <section class="view" id="ai-view">
+            <div class="page-head">
               <div>
-                <p class="panel-kicker">AI operations</p>
-                <h2>Model-assisted workstreams</h2>
+                <h1>AI Assistant</h1>
+                <p>Context-aware assistant for workflow health, reporting, integrations, and operational AI tasks.</p>
               </div>
-              <span class="status-pill warning">Human-in-the-loop demo</span>
             </div>
-            <div class="card-grid" id="ai-grid"></div>
-          </article>
-        </section>
 
-        <section class="view" id="integrations-view">
-          <article class="panel">
-            <div class="panel-heading">
-              <div>
-                <p class="panel-kicker">Enterprise integrations</p>
-                <h2>Connector landscape</h2>
-              </div>
-              <span class="status-pill success">Credential-ready demo</span>
+            <div class="ai-layout">
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="eyebrow">Assistant console</p>
+                    <h2>Workspace AI</h2>
+                  </div>
+                  <span class="badge badge-info">Context-aware demo</span>
+                </div>
+
+                <div class="chat-feed" id="ai-messages"></div>
+
+                <div class="chip-row" id="ai-chips"></div>
+
+                <div class="chat-input-row">
+                  <input id="ai-input" type="text" placeholder="Ask AutoFlow AI anything..." />
+                  <button class="btn-gold" id="ai-send-button">Send</button>
+                </div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="eyebrow">AI task runtime</p>
+                    <h2>Task Queue</h2>
+                  </div>
+                  <button class="text-link" id="new-ai-task-button">New AI Task</button>
+                </div>
+
+                <div class="stack-list" id="ai-task-grid"></div>
+              </section>
             </div>
+          </section>
+
+          <section class="view" id="integrations-view">
+            <div class="page-head">
+              <div>
+                <h1>Integrations Hub</h1>
+                <p>Connect, configure, and monitor enterprise systems from one connector workspace.</p>
+              </div>
+              <button class="btn-gold" id="connector-library-button">Connector Library</button>
+            </div>
+
+            <div class="stats-grid compact triple" id="integration-stats"></div>
+
+            <div class="toolbar">
+              <label class="search-field compact">
+                <span class="search-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-3.5-3.5"></path>
+                  </svg>
+                </span>
+                <input id="integration-search" type="text" placeholder="Search integrations..." autocomplete="off" />
+              </label>
+
+            </div>
+
             <div class="card-grid" id="integration-grid"></div>
-          </article>
-        </section>
 
-        <section class="view" id="readiness-view">
-          <div class="content-grid">
-            <article class="panel">
-              <div class="panel-heading">
+            <section class="panel" id="connector-library-section">
+              <div class="panel-head">
                 <div>
-                  <p class="panel-kicker">Deployment story</p>
-                  <h2>Company rollout checklist</h2>
-                </div>
-                <span class="status-pill success">Pilot-ready</span>
-              </div>
-              <div class="checklist" id="readiness-checks"></div>
-            </article>
-
-            <article class="panel">
-              <div class="panel-heading compact">
-                <div>
-                  <p class="panel-kicker">Implementation summary</p>
-                  <h2>What this demo communicates</h2>
+                  <p class="eyebrow">Connector library</p>
+                  <h2>Connector Library</h2>
                 </div>
               </div>
-              <ul class="detail-list">
-                <li>Secure operations platform with dashboards, workflows, reports, AI, and integrations.</li>
-                <li>Company-oriented navigation and realistic enterprise sample data.</li>
-                <li>Static, portable demo suitable for GitHub Pages, portfolio presentation, and stakeholder review.</li>
-                <li>Standalone folder that does not affect the live production Next.js application.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-      </main>
-    </div>
+              <div class="library-grid" id="connector-library"></div>
+            </section>
+          </section>
 
-    <div class="demo-modal hidden" id="demo-modal" aria-hidden="true">
-      <div class="demo-dialog">
-        <div class="demo-dialog-header">
-          <p class="eyebrow">Demo credentials</p>
-          <h2>Static walkthrough mode</h2>
-        </div>
-        <p class="dialog-copy">
-          This GitHub Pages package is a front-end demo, so sign-in is simulated. Use it for
-          product tours, GitHub Live previews, and stakeholder presentations.
-        </p>
-        <div class="demo-credentials">
-          <div>
-            <span>Administrator</span>
-            <strong>admin@autoflow.demo</strong>
-          </div>
-          <div>
-            <span>Password</span>
-            <strong>demo-access</strong>
-          </div>
-        </div>
-        <button class="primary-button wide-button" id="enter-demo">Enter demo workspace</button>
+          <section class="view" id="settings-view">
+            <div class="page-head">
+              <div>
+                <h1>Settings &amp; Access</h1>
+                <p>Review deployment controls, security posture, notification policy, and protected admin operations.</p>
+              </div>
+            </div>
+
+            <div class="settings-layout">
+              <div class="settings-tabs" id="settings-tabs"></div>
+              <section class="panel settings-panel">
+                <div id="settings-content"></div>
+              </section>
+            </div>
+          </section>
+        </main>
+
+        <footer class="workspace-footer">
+          <p>
+            © <span>Alexander.S D Great</span><sup>®</sup>. All rights reserved.
+          </p>
+        </footer>
       </div>
     </div>
+
+    <div class="modal-backdrop hidden" id="detail-modal" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow" id="modal-kicker">Details</p>
+            <h2 id="modal-title">Workspace Details</h2>
+          </div>
+          <button class="icon-button" id="modal-close" aria-label="Close details">X</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
 
     <script src="./app.js"></script>
   </body>
